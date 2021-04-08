@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Title: " />
+
+        <TextView
+            android:id="@+id/dog_breed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dog Breed: " />
+
+        <TextView
+            android:id="@+id/dog_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dog Name: " />
+
+        <TextView
+            android:id="@+id/dog_needs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dog Needs \\ Bio: " />
+
+        <TextView
+            android:id="@+id/amount_of_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Away Time" />
+
+        <TextView
+            android:id="@+id/amount_per_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount Per Hour: " />
+
+        <TextView
+            android:id="@+id/potty_trained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Is The Dog Potty Trained: " />
+
+        <TextView
+            android:id="@+id/animal_friendly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Is the dog friendly with other animals: " />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email: " />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone: " />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name: " />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date Posted: " />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State: " />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City: " />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
