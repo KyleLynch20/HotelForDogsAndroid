@@ -81,18 +81,18 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
 
         void setSitterData(SitterPost sitterPost) {
-            amountPerHour.setText(amountPerHour.getText().toString() + sitterPost.getAmountPerHour());
-            bio.setText(bio.getText().toString() + sitterPost.getBio());
-            breedSize.setText(breedSize.getText().toString() + sitterPost.getBreedSize());
-            city.setText(city.getText().toString() + sitterPost.getCity());
-            state.setText(state.getText().toString() + sitterPost.getState());
-            date.setText(date.getText().toString() + sitterPost.getDate());
-            email.setText(email.getText().toString() + sitterPost.getEmail());
-            fencedBackYard.setText(fencedBackYard.getText().toString() + sitterPost.getFencedBackYard());
-            fullName.setText(fullName.getText().toString() + sitterPost.getFullName());
-            otherAnimals.setText(otherAnimals.getText().toString() + sitterPost.getOtherAnimals());
-            phone.setText(phone.getText().toString() + sitterPost.getPhone());
-            title.setText(title.getText().toString() + sitterPost.getTitle());
+            amountPerHour.setText(sitterPost.getAmountPerHour());
+            bio.setText(sitterPost.getBio());
+            breedSize.setText(sitterPost.getBreedSize());
+            city.setText(sitterPost.getCity());
+            state.setText(sitterPost.getState());
+            date.setText(sitterPost.getDate());
+            email.setText(sitterPost.getEmail());
+            fencedBackYard.setText(sitterPost.getFencedBackYard());
+            fullName.setText(sitterPost.getFullName());
+            otherAnimals.setText(sitterPost.getOtherAnimals());
+            phone.setText(sitterPost.getPhone());
+            title.setText(sitterPost.getTitle());
         }
     }
 
@@ -120,20 +120,20 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
 
         void setNeedData(NeedPost needPost){
-            amountOfTime.setText(amountOfTime.getText().toString() + needPost.getAmountOfTime());
-            amountPerHour.setText(amountPerHour.getText().toString() + needPost.getAmountPerHour());
-            animalFriendly.setText(animalFriendly.getText().toString() + needPost.getAnimalFriendly());
-            city.setText(city.getText().toString() + needPost.getCity());
-            state.setText(state.getText().toString() + needPost.getState());
-            date.setText(date.getText().toString() + needPost.getDate());
-            dogBreed.setText(dogBreed.getText().toString() + needPost.getDogBreed());
-            dogName.setText(dogName.getText().toString() + needPost.getDogName());
-            dogNeeds.setText(dogNeeds.getText().toString() + needPost.getDogNeeds());
-            email.setText(email.getText().toString() + needPost.getEmail());
-            fullName.setText(fullName.getText().toString() + needPost.getFullName());
-            phone.setText(phone.getText().toString() + needPost.getPhone());
-            pottyTrained.setText(pottyTrained.getText().toString() + needPost.getPottyTrained());
-            title.setText(title.getText().toString() + needPost.getTitle());
+            amountOfTime.setText(needPost.getAmountOfTime());
+            amountPerHour.setText(needPost.getAmountPerHour());
+            animalFriendly.setText(needPost.getAnimalFriendly());
+            city.setText(needPost.getCity());
+            state.setText(needPost.getState());
+            date.setText(needPost.getDate());
+            dogBreed.setText(needPost.getDogBreed());
+            dogName.setText(needPost.getDogName());
+            dogNeeds.setText(needPost.getDogNeeds());
+            email.setText(needPost.getEmail());
+            fullName.setText(needPost.getFullName());
+            phone.setText(needPost.getPhone());
+            pottyTrained.setText(needPost.getPottyTrained());
+            title.setText(needPost.getTitle());
         }
     }
 
