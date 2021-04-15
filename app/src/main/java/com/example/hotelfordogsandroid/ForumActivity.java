@@ -1,8 +1,10 @@
 package com.example.hotelfordogsandroid;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -16,21 +18,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ForumActivity extends AppCompatActivity {
-    FirebaseFirestore db;
-    List<Posts> posts;
-    RecyclerView recyclerView;
-    MaterialEditText cityText;
-    MaterialEditText stateText;
-    Button needSitterButton;
-    Button sitterButton;
-    String typeOfPost;
-    TextView noDataText;
+    private FirebaseFirestore db;
+    private List<Posts> posts;
+    private RecyclerView recyclerView;
+    private MaterialEditText cityText;
+    private MaterialEditText stateText;
+    private Button needSitterButton;
+    private Button sitterButton;
+    private String typeOfPost;
+    private TextView noDataText;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forum);
         db = FirebaseFirestore.getInstance();
+        email = getIntent().getStringExtra("email");
         recyclerView = findViewById(R.id.recycler_view);
         cityText = findViewById(R.id.city);
         stateText = findViewById(R.id.state);
@@ -104,24 +108,30 @@ public class ForumActivity extends AppCompatActivity {
     public void needSitterButton(View view) {
         sitterButton.setBackground(ContextCompat.getDrawable(this, R.drawable.roundedbutton));
         needSitterButton.setBackground(ContextCompat.getDrawable(this, R.drawable.rounded_button_black));
-        typeOfPost = "needPosts";
+        typeOfPost = "sitterPosts";
     }
 
     public void sitterButton(View view) {
         sitterButton.setBackground(ContextCompat.getDrawable(this, R.drawable.rounded_button_black));
         needSitterButton.setBackground(ContextCompat.getDrawable(this,  R.drawable.roundedbutton));
-        typeOfPost = "sitterPosts";
+        typeOfPost = "needPosts";
     }
 
     public void postButton(View view) {
         if (typeOfPost != null && !TextUtils.isEmpty(stateText.getText().toString()) && !TextUtils.isEmpty(cityText.getText().toString())) {
-            // goto posts
+            if (typeOfPost.equals("sitterPosts")) {
+                Intent gotoNeedForumActivity = new Intent(this, NeedForumActivity.class);
+                gotoNeedForumActivity.putExtra("email", email);
+                gotoNeedForumActivity.putExtra("city", cityText.getText().toString());
+                gotoNeedForumActivity.putExtra("state", stateText.getText().toString());
+                this.startActivity(gotoNeedForumActivity);
+            } else {
+                Intent gotoSitterForumActivity = new Intent(this, SitterForumActivity.class);
+                gotoSitterForumActivity.putExtra("email", email);
+                gotoSitterForumActivity.putExtra("city", cityText.getText().toString());
+                gotoSitterForumActivity.putExtra("state", stateText.getText().toString());
+                this.startActivity(gotoSitterForumActivity);
+            }
         }
-
     }
-
-
-
-
-
 }

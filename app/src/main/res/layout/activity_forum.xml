@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F2F2F2"
     tools:context=".ForumActivity">
 
     <LinearLayout
@@ -22,7 +23,7 @@
             android:background="@drawable/roundedbutton"
             android:layout_marginRight="5dp"
             android:text="I am a sitter"
-            android:textColor="#fff"
+            android:textColor="#1976D2"
             android:onClick="sitterButton"/>
 
         <Button
@@ -33,7 +34,7 @@
             android:background="@drawable/roundedbutton"
             android:layout_marginLeft="5dp"
             android:text="Need a sitter"
-            android:textColor="#fff"
+            android:textColor="#1976D2"
             android:onClick="needSitterButton"/>
     </LinearLayout>
 
@@ -49,27 +50,27 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/city"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_weight="4"
             android:hint="City"
             android:layout_gravity="center"
             app:met_floatingLabel="normal"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="text"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/state"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_weight="4"
             android:hint="State"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center"
             app:met_floatingLabel="normal"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="text"/>
 
         <Button
@@ -80,7 +81,7 @@
             android:layout_gravity="center"
             android:background="@drawable/roundedbutton"
             android:text="Search"
-            android:textColor="#fff"
+            android:textColor="#1976D2"
             android:onClick="searchButton"/>
     </LinearLayout>
 
@@ -90,6 +91,7 @@
         android:layout_marginTop="5dp"
         android:visibility="visible"
         android:gravity="center"
+        android:textColor="@color/black"
         android:text="No Data"
         android:id="@+id/no_data_txt">
     </TextView>
@@ -106,10 +108,6 @@
         android:layout_gravity="center"
         android:background="@drawable/roundedbutton"
         android:text="Post"
-        android:textColor="#fff"
+        android:textColor="#1976D2"
         android:onClick="postButton"/>
-
-
-
-
 </LinearLayout>

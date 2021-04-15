@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="#F2F2F2"
     tools:context=".RegisterActivity">
 
     <com.rengwuxian.materialedittext.MaterialEditText
@@ -52,7 +53,7 @@
         android:background="@drawable/roundedbutton"
         android:onClick="registerButton"
         android:text="Register"
-        android:textColor="#fff" />
+        android:textColor="#1976D2" />
 
     <TextView
         android:id="@+id/error_txt"

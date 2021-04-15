@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(this,emailTxt.getText().toString() + " is logged in!", Toast.LENGTH_LONG).show();
                             Intent gotoForumActivity = new Intent(this, ForumActivity.class);
-                            //gotoFindFamilyActivity.putExtra("thisUserID", thisUserID);
+                            gotoForumActivity.putExtra("email", emailTxt.getText().toString());
                             this.startActivity(gotoForumActivity);
                         } else {
                             errorTxt.setText(task.getException().getMessage());
@@ -45,7 +45,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void registerButton(View view) {
         Intent gotoRegisterActivity = new Intent(this, RegisterActivity.class);
-        //gotoFindFamilyActivity.putExtra("thisUserID", thisUserID);
         this.startActivity(gotoRegisterActivity);
     }
 }

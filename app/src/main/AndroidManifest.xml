@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelForDogsAndroid"
         android:usesCleartextTraffic="true">
+        <activity android:name=".NeedForumActivity"></activity>
+        <activity android:name=".SitterForumActivity" />
         <activity android:name=".ForumActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
