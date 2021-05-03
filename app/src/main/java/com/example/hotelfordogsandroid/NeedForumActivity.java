@@ -103,7 +103,7 @@ public class NeedForumActivity extends AppCompatActivity {
         } else if (!Pattern.compile("^(\\d{3}[- .]?){2}\\d{4}$").matcher(phoneNumber).matches()) {
             errorTxt.setText("Please enter a valid phone number. Example: 123-456-7890");
             return false;
-        } else if (!Pattern.compile("^[1-9]* Hours").matcher(amountOfTime).matches() && !Pattern.compile("^[1-9]* hours").matcher(amountOfTime).matches()) {
+        } else if (!Pattern.compile("^[0-9]*[1-9][0-9]* Hours").matcher(amountOfTime).matches() && !Pattern.compile("^[0-9]*[1-9][0-9]* hours").matcher(amountOfTime).matches()) {
             errorTxt.setText("Amount of time is asking how long you need your dog watched for. Example: 5 Hours");
             return false;
         } else {
